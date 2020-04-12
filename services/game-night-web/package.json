@@ -5,17 +5,36 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "relay": "relay-compiler ./relay.config.js",
+    "relay:watch": "relay-compiler ./relay.config.js --watch"
   },
   "dependencies": {
+    "@material-ui/core": "^4.9.10",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.49",
+    "isomorphic-unfetch": "^3.0.0",
     "next": "9.3.4",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
+    "notistack": "^0.9.9",
+    "querystring": "^0.2.0",
+    "react": "0.0.0-experimental-8b155d261",
+    "react-dom": "0.0.0-experimental-8b155d261",
+    "react-relay": "0.0.0-experimental-8cc94ddc",
+    "relay-runtime": "^9.0.0",
     "styled-jsx": "^3.2.5"
   },
   "devDependencies": {
     "@types/node": "^13.11.1",
     "@types/react": "^16.9.34",
+    "@types/react-relay": "^7.0.3",
+    "@types/relay-runtime": "^8.0.8",
+    "babel-plugin-relay": "^9.0.0",
+    "dotenv": "^8.2.0",
+    "dotenv-webpack": "^1.7.0",
+    "relay-compiler": "^9.0.0",
+    "relay-compiler-language-typescript": "^12.0.0",
+    "relay-compiler-webpack-plugin": "^8.0.2",
+    "relay-config": "^9.0.0",
     "typescript": "^3.8.3"
   }
 }
