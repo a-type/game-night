@@ -1,0 +1,7 @@
+projects:
+  app:
+    schemaPath: services/game-night-api/src/schema/schema.graphql
+    includes: ['**/*.graphql', '**/*.ts', '**/*.tsx']
+    extensions:
+      endpoints:
+        default: http://localhost:8080

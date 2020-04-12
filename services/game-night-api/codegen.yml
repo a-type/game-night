@@ -1,0 +1,15 @@
+overwrite: true
+schema: './src/schema/schema.graphql'
+documents: null
+generates:
+  src/schema/generated/graphql.ts:
+    config:
+      contextType: ../../context#Context
+      useIndexSignature: true # apollo compat
+      # defaultMapper: ../../utils/utilityTypes#Normalized<{T}>
+    plugins:
+      - 'typescript'
+      - 'typescript-resolvers'
+    ./graphql.schema.json:
+      plugins:
+        - 'introspection'

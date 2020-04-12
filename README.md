@@ -3,9 +3,9 @@ Prototype online board game app
 
 ## Development
 
-This project uses Yarn 2 with workspaces, zero-install, and PnP. It runs PnP in "loose" configuration, which is a workaround for annoying blocking issues with undeclared dependencies.
+This project uses Yarn 2 with workspaces and zero-install. I haven't tested zero-install across workstations.
 
-Here's the rundown:
+### Cheat sheet
 
 * With zero-install, you probably don't have to install dependencies after cloning. But just in case, you can install dependencies: `yarn install` in root
 * Run scripts: `yarn dev`, etc, in service directories
