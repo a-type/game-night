@@ -1,0 +1,12 @@
+{
+  "name": "game-night",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:a-type/game-night.git",
+  "author": "Grant Forrest <a-type@outlook.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "services/*"
+  ]
+}
