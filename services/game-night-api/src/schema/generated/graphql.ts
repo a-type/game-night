@@ -10,6 +10,14 @@ export type Scalars = {
   Float: number;
 };
 
+export type PageInfo = {
+   __typename?: 'PageInfo';
+  hasPreviousPage: Scalars['Boolean'];
+  hasNextPage: Scalars['Boolean'];
+  startCursor: Scalars['String'];
+  endCursor: Scalars['String'];
+};
+
 export type Query = {
    __typename?: 'Query';
   ping: Scalars['String'];
@@ -92,6 +100,7 @@ export type ResolversTypes = ResolversObject<{
   String: ResolverTypeWrapper<Scalars['String']>,
   Boolean: ResolverTypeWrapper<Scalars['Boolean']>,
   ID: ResolverTypeWrapper<Scalars['ID']>,
+  PageInfo: ResolverTypeWrapper<PageInfo>,
   Query: ResolverTypeWrapper<{}>,
 }>;
 
@@ -100,7 +109,16 @@ export type ResolversParentTypes = ResolversObject<{
   String: Scalars['String'],
   Boolean: Scalars['Boolean'],
   ID: Scalars['ID'],
+  PageInfo: PageInfo,
   Query: {},
+}>;
+
+export type PageInfoResolvers<ContextType = Context, ParentType extends ResolversParentTypes['PageInfo'] = ResolversParentTypes['PageInfo']> = ResolversObject<{
+  hasPreviousPage?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>,
+  hasNextPage?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>,
+  startCursor?: Resolver<ResolversTypes['String'], ParentType, ContextType>,
+  endCursor?: Resolver<ResolversTypes['String'], ParentType, ContextType>,
+  __isTypeOf?: isTypeOfResolverFn<ParentType>,
 }>;
 
 export type QueryResolvers<ContextType = Context, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = ResolversObject<{
@@ -108,6 +126,7 @@ export type QueryResolvers<ContextType = Context, ParentType extends ResolversPa
 }>;
 
 export type Resolvers<ContextType = Context> = ResolversObject<{
+  PageInfo?: PageInfoResolvers<ContextType>,
   Query?: QueryResolvers<ContextType>,
 }>;
 
