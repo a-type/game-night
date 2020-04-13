@@ -91,6 +91,7 @@ export type DirectiveResolverFn<TResult = {}, TParent = {}, TContext = {}, TArgs
 export type ResolversTypes = ResolversObject<{
   String: ResolverTypeWrapper<Scalars['String']>,
   Boolean: ResolverTypeWrapper<Scalars['Boolean']>,
+  ID: ResolverTypeWrapper<Scalars['ID']>,
   Query: ResolverTypeWrapper<{}>,
 }>;
 
@@ -98,6 +99,7 @@ export type ResolversTypes = ResolversObject<{
 export type ResolversParentTypes = ResolversObject<{
   String: Scalars['String'],
   Boolean: Scalars['Boolean'],
+  ID: Scalars['ID'],
   Query: {},
 }>;
 
