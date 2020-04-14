@@ -22,7 +22,6 @@ function fetchQuery(
   // this code runs on server-side and client-side. both need to point to the same
   // server API host
 
-  console.log(process.env);
   return fetch(`${relayServer}/graphql`, {
     method: 'POST',
     headers: {
